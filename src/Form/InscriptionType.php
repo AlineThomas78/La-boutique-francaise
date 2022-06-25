@@ -10,6 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 
 class InscriptionType extends AbstractType
 {
@@ -28,20 +29,14 @@ class InscriptionType extends AbstractType
                 'placeholder'=> "Veuillez saisir votre email"
             ]
         ])
-            ->add('password', PasswordType::class,[
-                'label'=> "Mot de passe",
-                'attr'=> [
-                    'placeholder' => "Veuillez saisir votre mot de passe "
-                ]
+            ->add('password', RepeatedType::class,[
+                'type'=> PasswordType::class,
+                'invalid_message'=> "Vous devez répétez le même mot de passe !",
+                'required'=> true,
+                'first_options' => [ 'label'=> 'Mot de passe'],
+                'second_options'=> ['label'=> 'Confirmez votre mot de passe !']
             ])
 
-            ->add('password_confirm', PasswordType::class, [
-                'label' => "Confirmez votre mot de passe",
-                'mapped' => false,
-                'attr' => [
-                    'placeholder' => "Confirmez votre mot de passe"
-                ]
-            ])
 
             ->add('submit', SubmitType::class,[
                 'label' => "S'inscire"  ]);
