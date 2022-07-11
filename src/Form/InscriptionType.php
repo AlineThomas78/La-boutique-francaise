@@ -37,7 +37,6 @@ class InscriptionType extends AbstractType
                 'second_options'=> ['label'=> 'Confirmez votre mot de passe !']
             ])
 
-
             ->add('submit', SubmitType::class,[
                 'label' => "S'inscire"  ]);
     }

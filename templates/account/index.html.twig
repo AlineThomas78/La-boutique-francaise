@@ -1,7 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AccountController!{% endblock %}
+{% block title %}Mon compte - La boutique Française {% endblock %}
 
 {% block content %}
-<h1>Bienvenue {{app.user.prenom}} sur votre espace membre</h1>
+<h1>Bienvenue {{app.user.prenom}} sur votre espace membre</h1><br>
+
+- <a href="{{ path ('app_account_password') }}">Modifier/changer mon mot de passe</a><br>
+- Modiffier mon adresse<br>
+- Mes commandes
+<br>
 {% endblock %}

@@ -15,6 +15,10 @@ class InscriptionController extends AbstractController
 {
     private $entityManager;
 
+    /**
+     * InscriptionController construtor
+     * @param EntityManagerInterface $entityManager
+     */
     public function __construct(EntityManagerInterface $entityManager){
         $this->entityManager = $entityManager;
     }
