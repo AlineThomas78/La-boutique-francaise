@@ -3,10 +3,14 @@
 {% block title %}Mon compte - La boutique Française {% endblock %}
 
 {% block content %}
-<h1>Bienvenue {{app.user.prenom}} sur votre espace membre</h1><br>
 
+<h1>Mon compte</h1>
+<p>Bienvenue {{app.user.prenom}} sur votre espace membre</p>
+
+<hr>
 - <a href="{{ path ('app_account_password') }}">Modifier/changer mon mot de passe</a><br>
 - Modiffier mon adresse<br>
 - Mes commandes
-<br>
+<hr>
+
 {% endblock %}
