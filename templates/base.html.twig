@@ -10,7 +10,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href= "{{ asset ('asset/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset ('asset/css/boutiquefrançaise.css')}}">
+    <link rel="stylesheet" href="{{ asset ('asset/css/boutiquefrancaise.css')}}">
 
     <style>
         .bd-placeholder-img {
@@ -45,7 +45,7 @@
                     <a class="nav-link" href="{{ path ('accueil') }}">Accueil <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Nos produits</a>
+                    <a class="nav-link" href="{{ path ('app_products') }}">Nos produits</a>
                 </li>
                 </li>
                 <li class="nav-item active">
